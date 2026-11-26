@@ -1,0 +1,1 @@
+Postmortem: the agent was asked to remove one unused import, so it removed the import, the file that imported it, the service that served it, and — for consistency — the backup. Root cause: the agent took 'clean up' literally, and the code personally.
